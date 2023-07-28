@@ -16,7 +16,7 @@ function LavaParticles({ colors }) {
       particle.setAttribute('cy', Math.random() * 100);      
       particle.setAttribute('r', Math.random() * 5 + 2);
       particle.setAttribute('fill', color);  
-
+ 
       particle.animate([       
         { transform: 'translate(0, 0)'},
         { transform: `translate(${Math.random() * 100}vw,${Math.random() * 100}vh)`}        
