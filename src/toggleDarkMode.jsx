@@ -3,14 +3,14 @@ function toggleDarkMode(colors, setColors) {
    if (colors[1] === 'white') {    
      r.style.setProperty('--bg', 'white');
      r.style.setProperty('--invert', 0);
-     r.style.setProperty('--textColor', 'black');
+     r.style.setProperty('--textColor', 'rgba(0,0,0,0.75)');
      r.style.setProperty('--hoverColor', 'rgba(0,0,0,0.2)');
      setColors(['grey', 'black']);
      
    } else {
      r.style.setProperty('--bg', 'black');
      r.style.setProperty('--invert', 1);
-     r.style.setProperty('--textColor', 'white');
+     r.style.setProperty('--textColor', 'rgba(255,255,255,0.75)');
      r.style.setProperty('--hoverColor', 'rgba(255,255,255,0.2)');
      setColors(['grey', 'white']);  
    }
