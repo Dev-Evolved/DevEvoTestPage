@@ -18,8 +18,8 @@ function LavaParticles({ colors }) {
       particle.setAttribute('fill', color);  
   
       particle.animate([       
-        { transform: 'translate(0, 0)'},
-        { transform: `translate(${Math.random() * 100}vw,${Math.random() * 100}vh)`}        
+        { transform: 'translate(0, 0)', opacity: '0' },
+        { transform: `translate(${Math.random() * 100}vw,${Math.random() * 100}vh)`, opacity: '1' }        
       ], {       
         duration: Math.random() * 3000 + 5000,       
         iterations: Infinity     

@@ -11,7 +11,7 @@ export default function App() {
 
   return (
     <main>     
-      <button class='toggleDarkMode' onClick={() => {toggleDarkMode(colors, setColors)}}><BsFillMoonStarsFill class='defualt'/></button>       
+      <button class='toggleDarkMode clip' onClick={() => {toggleDarkMode(colors, setColors)}}><BsFillMoonStarsFill/></button>       
       <LavaParticles colors={colors} />        
       <div className='titlePageMainLogo fadeIn'></div>        
     </main>
