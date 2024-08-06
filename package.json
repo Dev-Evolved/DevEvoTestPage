@@ -12,7 +12,8 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "react-icons": "^4.10.1"
+    "react-icons": "^4.10.1",
+    "react-javascript": "file:"
   },
   "devDependencies": {
     "@types/react": "^18.0.27",

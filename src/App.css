@@ -3,6 +3,7 @@
   --bg:black;
   --textColor:rgba(255,255,255,0.5);
   --hoverColor:rgba(255,255,255,0.2);
+  --color:rgb(48, 48, 48,0.75);
   --invert:1;
   --titlePageMainLogoSize:300px;
   --clipSize:5px;
@@ -37,6 +38,25 @@ main {
   -ms-user-select: none;
   user-select: none;
 }
+bg {
+  position:fixed;
+  top:0;
+  left:0;
+  background:transparent;
+  margin:0;
+  padding:0;
+  width:100vw;
+  height:100vh;
+  overflow-x:hidden;
+}
+LavaParticles {
+  position:fixed;
+  top:0;
+  left:0;
+  width:100vw;
+  height:100vh;
+  z-index:-1;
+}
 button {
   background:transparent;border:none;outline:none;cursor:pointer;
   text-align:center;
@@ -45,6 +65,7 @@ button {
   -webkit-clip-path: polygon(var(--clipSize) 0%, calc(100% - var(--clipSize)) 0%, 100% var(--clipSize), 100% calc(100% - var(--clipSize)), calc(100% - var(--clipSize)) 100%, var(--clipSize) 100%, 0% calc(100% - var(--clipSize)), 0% var(--clipSize));
   clip-path: polygon(var(--clipSize) 0%, calc(100% - var(--clipSize)) 0%, 100% var(--clipSize), 100% calc(100% - var(--clipSize)), calc(100% - var(--clipSize)) 100%, var(--clipSize) 100%, 0% calc(100% - var(--clipSize)), 0% var(--clipSize));
 }
+
 .toggleDarkMode {
   position:absolute;
   display:block;
@@ -62,21 +83,46 @@ button {
 .toggleDarkMode:hover {
   background:var(--hoverColor);
 }
+.titlePageMainLogobg {
+  height:100vh;
+}
 .titlePageMainLogo {
   background:url(/DevEvoTransparent.png) no-repeat center center;
   background-size:cover;
   display:block;
   width:var(--titlePageMainLogoSize);
   height:var(--titlePageMainLogoSize);
-  margin:auto;
-  position:absolute;
-  top:25%;
-  left:50%;
-  transform:translateX(-50%);
+  margin:25vh auto auto auto;
   filter:invert(var(--invert));
 }
 .backRow {
   position:fixed;
   top:0;
   left:0;
+}
+.creators {
+  height:calc(100vh - 80px);
+  width:100vw;
+  position:relative;
+}
+.creators .creator {
+  width:calc(50vw - 80px);
+  height:100%;
+  padding:20px;
+  margin:20px;
+  background:var(--color);
+  border-radius:20px;
+  text-align:center;
+  display:inline-block;
+}
+.creators .creator img {
+  width:calc(25vw - 40px);
+  height:calc(25vw - 40px);
+  object-fit:cover;
+  border-radius:100%;
+  display:block;
+  margin:auto;
+}
+.footer {
+  height:100px;
 }

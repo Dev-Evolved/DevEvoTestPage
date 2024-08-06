@@ -11,9 +11,25 @@ export default function App() {
 
   return (
     <main>     
-      <button class='toggleDarkMode clip' onClick={() => {toggleDarkMode(colors, setColors)}}><BsFillMoonStarsFill/></button>       
-      <LavaParticles colors={colors} />        
-      <div className='titlePageMainLogo fadeIn'></div>        
+      <LavaParticles colors={colors} />   
+      <bg>
+        <button class='toggleDarkMode clip' onClick={() => {toggleDarkMode(colors, setColors)}}><BsFillMoonStarsFill/></button> 
+        <div className='titlePageMainLogobg'>
+        <div className='titlePageMainLogo fadeIn'></div>
+        </div>
+        <div className='videoCarosel'></div>
+        <div className='creators fadeIn'>
+          <div className='creator'>
+            <img src='public/dom.jpg'/>
+            <h1>Dominik Honzak</h1>
+          </div>
+          <div className='creator'>
+            <img src='public/anto.jpg'/>
+            <h1>Anthony Salvado</h1>
+          </div>
+        </div>
+        <div className='footer'></div>
+      </bg>
     </main>
   ) 
 }
