@@ -24,7 +24,7 @@ export default function App() {
             <h1>Dominik Honzak</h1>
           </div>
           <div className='creator'>
-            <img src='public/anto.jpg'/>
+            <img src='public/anto3.jpg'/>
             <h1>Anthony Salvado</h1>
           </div>
         </div>

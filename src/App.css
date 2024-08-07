@@ -16,6 +16,7 @@ html,body {
   width:100vw;
   height:100vh;
   transition:0.2s linear;
+  scroll-behavior: smooth;
 }
 main {
   background:transparent;
