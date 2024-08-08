@@ -1,0 +1,9 @@
+@media only screen and (max-width: 600px) {
+  .carousel,.creators {
+    flex-direction: column;
+  }
+  .playBtn {
+    width:20px;
+    height:20px;
+  }
+}

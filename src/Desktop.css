@@ -1,0 +1,207 @@
+:root {
+  /* --bg:white; */
+  --bg:black;
+  --textColor:rgba(255,255,255,0.5);
+  --hoverColor:rgba(255,255,255,0.2);
+  --color:rgb(48, 48, 48,0.75);
+  --invert:1;
+  --titlePageMainLogoSize:300px;
+  --clipSize:5px;
+}
+html,body {
+  background:var(--bg);
+  color:var(--textColor);
+  margin:0;
+  padding:0;
+  width:100vw;
+  height:100vh;
+  transition:0.2s linear;
+  scroll-behavior: smooth;
+}
+main {
+  background:transparent;
+  margin:0;
+  padding:0;
+  width:100vw;
+  height:100vh;
+  overflow-x:hidden;
+}
+*::-webkit-scrollbar {
+  display: none;
+}
+
+* {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+* {
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+.bg {
+  position:fixed;
+  top:0;
+  left:0;
+  background:transparent;
+  margin:0;
+  padding:0;
+  width:100vw;
+  height:100vh;
+  overflow-x:hidden;
+}
+LavaParticles {
+  position:fixed;
+  top:0;
+  left:0;
+  width:100vw;
+  height:100vh;
+  z-index:-1;
+}
+button {
+  background:transparent;border:none;outline:none;cursor:pointer;
+  text-align:center;
+}
+.clip {
+  -webkit-clip-path: polygon(var(--clipSize) 0%, calc(100% - var(--clipSize)) 0%, 100% var(--clipSize), 100% calc(100% - var(--clipSize)), calc(100% - var(--clipSize)) 100%, var(--clipSize) 100%, 0% calc(100% - var(--clipSize)), 0% var(--clipSize));
+  clip-path: polygon(var(--clipSize) 0%, calc(100% - var(--clipSize)) 0%, 100% var(--clipSize), 100% calc(100% - var(--clipSize)), calc(100% - var(--clipSize)) 100%, var(--clipSize) 100%, 0% calc(100% - var(--clipSize)), 0% var(--clipSize));
+}
+
+.toggleDarkMode {
+  position:absolute;
+  display:block;
+  right:0;
+  top:0;
+  margin:10px;
+  width:40px;
+  height:40px;
+  font-size:20px;
+  text-align:center;
+  line-height:40px;
+  color:var(--textColor);
+  transition:0.2s linear;
+}
+.toggleDarkMode:hover {
+  background:var(--hoverColor);
+}
+.titlePageMainLogobg {
+  height:100vh;
+}
+.titlePageMainLogo {
+  background:url(/DevEvoTransparent.png) no-repeat center center;
+  background-size:cover;
+  display:block;
+  width:var(--titlePageMainLogoSize);
+  height:var(--titlePageMainLogoSize);
+  margin:25vh auto auto auto;
+  filter:invert(var(--invert));
+}
+.backRow {
+  position:fixed;
+  top:0;
+  left:0;
+}
+.creators {
+  min-height:calc(100vh - 80px);
+  display:flex;
+  width:100vw;
+  position:relative;
+}
+.creators .creator {
+  min-width:calc(50vw - 80px);
+  flex:50vw;
+  height:100%;
+  padding:20px;
+  margin:20px;
+  background:var(--color);
+  border-radius:20px;
+  text-align:center;
+  display:inline-block;
+}
+.creators .creator img {
+  width:calc(25vw - 40px);
+  height:calc(25vw - 40px);
+  object-fit:cover;
+  border-radius:100%;
+  display:block;
+  margin:auto;
+}
+.carousel {
+  min-height:75vh;
+  width:100vw;
+  display:flex;
+}
+.carousel > div {
+  flex:calc(33.333333333vw);
+  margin:20px;
+  display:inline-block;
+  border-radius:20px;
+  height:calc(75vh - 40px);
+  position:relative;
+  background:var(--color);
+}
+.carousel > div > img {
+  width:100%;
+  height:100%;
+  object-fit:cover;
+}
+.playBtn {
+  position:absolute;
+  top:50%;
+  left:50%;
+  transform:translate(-50%,-50%);
+  width:100px;
+  height:100px;
+  border-radius:100%;
+  background:var(--hoverColor);
+  padding:10px;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  font-size:50px;
+  color:var(--textColor);
+  cursor:pointer;
+  transition:0.2s linear;
+}
+.line-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.line {
+  flex-grow: 1;
+  height: 1px;
+  margin: 0 20px;
+  background-color: var(--textColor);
+}
+.line-text {
+  color:var(--textColor);
+  margin: 0 10px;
+  white-space: nowrap;
+}
+.downArrow {
+  position:absolute;
+  bottom:20px;
+  left:0;
+  width:100vw;
+  height:40px;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  font-size:50px;
+  color:var(--textColor);
+  cursor:pointer;
+  transition:0.2s linear;
+}
+.downArrow:hover {
+  color:var(--hoverColor);
+  animation-play-state: paused;
+}
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 20vh;
+  padding: 20px;
+}

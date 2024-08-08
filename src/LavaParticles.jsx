@@ -1,12 +1,17 @@
 import React, { useEffect, useRef } from 'react';
-
+//slow down when scroll down on page 
+//when color change delete all particles
 function LavaParticles({ colors }) {
   const svgRef = useRef(null);
 
   useEffect(() => {
     const svg = svgRef.current;    
-    const numParticles = 50; 
+    const numParticles = 100; 
     
+    //delete previous svg before starting a new one
+    while (svg.firstChild) {
+      svg.removeChild(svg.firstChild);
+    }
 
     for (let i = 0; i < numParticles; i++) {
       const particle = document.createElementNS('http://www.w3.org/2000/svg', 'circle');
