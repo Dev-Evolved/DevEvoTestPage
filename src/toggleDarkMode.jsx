@@ -8,6 +8,7 @@ function toggleDarkMode(colors, setColors) {
      r.style.setProperty('--color', 'rgb(196, 196, 196,0.75)');
      setColors(['grey', 'black']);
      document.getElementById('favicon').href = '/DevEvoWhite.png';
+     localStorage.setItem('darkMode', 'false');
      
    } else {
      r.style.setProperty('--bg', 'black');
@@ -17,6 +18,7 @@ function toggleDarkMode(colors, setColors) {
      r.style.setProperty('--color', 'rgb(48, 48, 48,0.75)');
      setColors(['grey', 'white']);  
      document.getElementById('favicon').href = '/DevEvoDark.png';
+     localStorage.setItem('darkMode', 'true');
    }
 }
 

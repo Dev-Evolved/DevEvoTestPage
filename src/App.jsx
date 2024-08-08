@@ -9,8 +9,11 @@ import { BsFillSunFill } from "react-icons/bs";
 import { FaSortDown } from "react-icons/fa";
 
 export default function App() {
-  const [colors, setColors] = React.useState(['grey', 'white'])
-
+  
+  const [colors, setColors] = React.useState(['grey', 'white']);
+  window.onloaded = () => {
+    localStorage.getItem('darkMode') === 'true' ? toggleDarkMode(colors, setColors) : null;
+  };
   return (
     <main>     
       <LavaParticles colors={colors} />   
@@ -22,16 +25,16 @@ export default function App() {
             document.querySelector('.line-container').scrollIntoView({ behavior: 'smooth' })
           }} />
         </div>
-        <div class="line-container">
-            <div class="line"></div>
-            <span class="line-text">Videos</span>
-            <div class="line"></div>
+        <div className="line-container">
+            <div className="line"></div>
+            <span className="line-text">Videos</span>
+            <div className="line"></div>
         </div>
         <Videos />
-        <div class="line-container">
-            <div class="line"></div>
-            <span class="line-text">Creators</span>
-            <div class="line"></div>
+        <div className="line-container">
+            <div className="line"></div>
+            <span className="line-text">Creators</span>
+            <div className="line"></div>
         </div>
         <div className='creators fadeIn'>
           <div className='creator'>
