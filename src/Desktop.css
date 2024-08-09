@@ -88,7 +88,7 @@ button {
   height:100vh;
 }
 .titlePageMainLogo {
-  background:url(/DevEvoTransparent.png) no-repeat center center;
+  background:url(/assets/DevEvoTransparent.png) no-repeat center center;
   background-size:cover;
   display:block;
   width:var(--titlePageMainLogoSize);
