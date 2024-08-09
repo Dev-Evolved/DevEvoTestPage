@@ -1,4 +1,4 @@
-function toggleDarkMode(colors, setColors) {
+const toggleDarkMode = (colors, setColors) => {
    let r = document.querySelector(':root');
    if (colors[1] === 'white') {    
      r.style.setProperty('--bg', 'white');
@@ -20,6 +20,6 @@ function toggleDarkMode(colors, setColors) {
      document.getElementById('favicon').href = '/DevEvoDark.png';
      localStorage.setItem('darkMode', 'true');
    }
-}
+};
 
 export default toggleDarkMode;

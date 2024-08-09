@@ -11,14 +11,14 @@ import { FaSortDown } from "react-icons/fa";
 export default function App() {
   
   const [colors, setColors] = React.useState(['grey', 'white']);
-  window.onloaded = () => {
-    localStorage.getItem('darkMode') === 'true' ? toggleDarkMode(colors, setColors) : null;
+  window.onload = () => {
+    localStorage.getItem('darkMode') === 'true' ? null : toggleDarkMode(colors, setColors);
   };
   return (
     <main>     
       <LavaParticles colors={colors} />   
       <div className='bg'>
-        <button className='toggleDarkMode clip' onClick={() => {toggleDarkMode(colors, setColors)}}><BsFillMoonStarsFill/></button> 
+        <button className='toggleDarkMode clip' onClick={() => {toggleDarkMode(colors, setColors)}}><BsFillSunFill/></button> 
         <div className='titlePageMainLogobg'>
           <div className='titlePageMainLogo fadeIn'></div>
           <FaSortDown className='downArrow bounce' onClick={() => {
