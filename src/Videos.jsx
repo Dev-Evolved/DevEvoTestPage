@@ -25,7 +25,7 @@ const Videos = () => {
       {vids.map((vid) => (
         <div key={vid.id} onClick={() => window.open(vid.Video, '_blank')}>
           <CiPlay1 className='playBtn'/>
-          <img src={"/assets/images/"+vid.Thumbnail} alt={vid.Title} />
+          <img src={"/images/"+vid.Thumbnail} alt={vid.Title} />
         </div>
       ))}
     </div>
