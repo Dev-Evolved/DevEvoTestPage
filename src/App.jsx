@@ -38,11 +38,11 @@ export default function App() {
         </div>
         <div className='creators fadeIn'>
           <div className='creator'>
-            <img src='/images/dom.jpg'/>
+            <img src='./images/dom.jpg'/>
             <h1>Dominik Honzak</h1>
           </div>
           <div className='creator'>
-            <img src='/images/anto3.jpg'/>
+            <img src='./images/anto3.jpg'/>
             <h1>Anthony Salvado</h1>
           </div>
         </div>

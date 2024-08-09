@@ -7,7 +7,7 @@ const toggleDarkMode = (colors, setColors) => {
      r.style.setProperty('--hoverColor', 'rgba(0,0,0,0.2)');
      r.style.setProperty('--color', 'rgb(196, 196, 196,0.75)');
      setColors(['grey', 'black']);
-     document.getElementById('favicon').href = '/images/DevEvoWhite.png';
+     document.getElementById('favicon').href = './images/DevEvoWhite.png';
      localStorage.setItem('darkMode', 'false');
      
    } else {
@@ -17,7 +17,7 @@ const toggleDarkMode = (colors, setColors) => {
      r.style.setProperty('--hoverColor', 'rgba(255,255,255,0.2)');
      r.style.setProperty('--color', 'rgb(48, 48, 48,0.75)');
      setColors(['grey', 'white']);  
-     document.getElementById('favicon').href = '/images/DevEvoDark.png';
+     document.getElementById('favicon').href = './images/DevEvoDark.png';
      localStorage.setItem('darkMode', 'true');
    }
 };
