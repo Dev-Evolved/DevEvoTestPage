@@ -23,7 +23,7 @@ const Videos = () => {
   return (
     <div className='carousel'>
       {vids.map((vid) => (
-        <div key={vid.id}>
+        <div key={vid.id} onClick={() => window.open(vid.Video, '_blank')}>
           <CiPlay1 className='playBtn'/>
           <img src={vid.Thumbnail} alt={vid.Title} />
         </div>

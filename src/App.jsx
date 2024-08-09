@@ -9,7 +9,7 @@ import { BsFillSunFill } from "react-icons/bs";
 import { FaSortDown } from "react-icons/fa";
 
 export default function App() {
-  
+  const [light, setLight] = useState(false);
   const [colors, setColors] = React.useState(['grey', 'white']);
   window.onload = () => {
     localStorage.getItem('darkMode') === 'true' ? null : toggleDarkMode(colors, setColors);
@@ -18,7 +18,7 @@ export default function App() {
     <main>     
       <LavaParticles colors={colors} />   
       <div className='bg'>
-        <button className='toggleDarkMode clip' onClick={() => {toggleDarkMode(colors, setColors)}}><BsFillSunFill/></button> 
+        <button className='toggleDarkMode clip' onClick={() => {toggleDarkMode(colors, setColors);setLight(!light)}}>{light ? <BsFillSunFill/> : <BsFillMoonStarsFill/>}</button> 
         <div className='titlePageMainLogobg'>
           <div className='titlePageMainLogo fadeIn'></div>
           <FaSortDown className='downArrow bounce' onClick={() => {
